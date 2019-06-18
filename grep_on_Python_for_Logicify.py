@@ -4,6 +4,7 @@ import sys
 
 
 def grep(subline, file, is_invert):
+    subline = re.compile(subline)
     with open(file) as f:
         for line in f:
             match = re.search(subline, line)
